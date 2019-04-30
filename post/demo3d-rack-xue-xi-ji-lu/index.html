@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>Demo3D-Rack学习记录 | Gridea</title>
 <link rel="shortcut icon" href="https://benben0605.github.io//favicon.ico?v=1556594974776">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://benben0605.github.io//styles/main.css">
@@ -72,22 +72,66 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              Demo3D-Rack学习记录
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2019-04-30 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <h2 id="rack学习记录">Rack学习记录</h2>
+<p>###Table</p>
+<p>在对Demo3D组件库中的Rack和SRM的学习工程中，了解到了Table的使用，此处记录一下对Table的基本操作。</p>
+<p><strong>遍历Table</strong></p>
+<p><img src="Demo3D%E5%AD%A6%E4%B9%A0_picSource/1533633836457.png" alt="获取表格中的值"></p>
+<ul>
+<li><code>cell {rowNo} {columnNo} in {table}</code></li>
+</ul>
+<p><strong>Table中的一行</strong></p>
+<p><img src="Demo3D%E5%AD%A6%E4%B9%A0_picSource/1533635548103.png" alt="Table中的一行"></p>
+<ul>
+<li>
+<p><code>row {1} from {table}</code></p>
+<p>​</p>
+</li>
+</ul>
+<p><strong>Table一行中对应字段的值</strong></p>
+<p><img src="Demo3D%E5%AD%A6%E4%B9%A0_picSource/1533636525450.png" alt="1533636525450"></p>
+<p>输出结果：3</p>
+<p><strong>Table之间的关联查询</strong></p>
+<p><img src="Demo3D%E5%AD%A6%E4%B9%A0_picSource/1533641639471.png" alt="1533641639471"></p>
+<ul>
+<li>取到表一相应row，相应字段的值</li>
+<li>根据该值在表二<code>SKU字段</code>中匹配到row，取到该row<code>LoadCreator字段</code>的值，拿到LoadCreator从而对Rack进行初始化。
+<ul>
+<li><img src="Demo3D%E5%AD%A6%E4%B9%A0_picSource/1533642513025.png" alt="1533642513025"></li>
+</ul>
+</li>
+</ul>
+<p><strong>Tips</strong></p>
+<p>可以依据该准则定位：先找row、再找column</p>
+<p><strong>过程</strong></p>
+<p><img src="Demo3D%E5%AD%A6%E4%B9%A0_picSource/1533643273390.png" alt="1533643273390"></p>
+<p><strong>效果</strong></p>
+<p><img src="Demo3D%E5%AD%A6%E4%B9%A0_picSource/1533643267156.png" alt="1533643267156"></p>
+<p>Tutorial：<a href="http://store.sim3d.com/docview.php?format=ui&amp;id=168">How to Order Loads from Populated Racks</a></p>
 
             </div>
           </article>
         </div>
     
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://benben0605.github.io//post/hello-gridea">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>  
         
 
         
