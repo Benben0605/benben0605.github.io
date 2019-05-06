@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>智能制造使能技术 —— 建立数字化模型 | Gridea</title>
+<link rel="shortcut icon" href="https://benben0605.github.io//favicon.ico?v=1557145490225">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://benben0605.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://benben0605.github.io/">
+  <img class="avatar" src="https://benben0605.github.io//images/avatar.png?v=1557145490225" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              智能制造使能技术 —— 建立数字化模型
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-05-06 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <hr>
+<p>typora-copy-images-to: ./Blog_picSource</p>
+<hr>
+<p>智能制造**是指具有信息自感知、自决策、自执行等功能的先进制造过程、系统与模式的总称。</p>
+<p>为建立起物理世界和数字世界之间的准实时联系，必须建立数字化模型，本文主要讨论：</p>
+<ol>
+<li>专机设备库搭建</li>
+<li>脚本控制在途品运动</li>
+<li>库存数据管理</li>
+</ol>
+<p>以及阐述如何实现多视图联动。</p>
+<h4 id="项目描述">项目描述</h4>
+<p>本项目主要对玻璃的磨边、清洗、分拣入库等工艺段进行模拟演示，需实现玻璃按照相应的规则进行出入库，并实现「仿真平台」与「实物设备」的同步。</p>
+<p>![玻璃磨边清洗 标注图](./Blog_picSource/玻璃磨边清洗 标注图.jpg)</p>
+<p>![玻璃磨边清洗 运动流程图](./Blog_picSource/玻璃磨边清洗 运动流程图.jpg)</p>
+<h4 id="建立数字化模型">建立数字化模型</h4>
+<p><strong>专机设备库搭建</strong></p>
+<p>分拣转向装置</p>
+<ul>
+<li>
+<p>库位情况分析模块</p>
+<blockquote>
+<p>根据玻璃型号、仓库在存玻璃型号、库位空闲情况 判断玻璃的<strong>目标库位</strong></p>
+</blockquote>
+</li>
+<li>
+<p>分拣转向动作脚本模块</p>
+</li>
+</ul>
+<p>入库小车</p>
+<ul>
+<li>根据入库库位的升降动作</li>
+</ul>
+<p>层式仓库</p>
+<ul>
+<li>入库库存更新</li>
+<li>出库库存更新</li>
+</ul>
+<p><strong>脚本控制在途品运动</strong></p>
+<p>运动脚本包括：控制变量、运动参数、运动函数；</p>
+<p>「控制变量」 控制 「运动函数的执行」。</p>
+<p><strong>库存数据管理</strong></p>
+<ul>
+<li>原库存数据</li>
+<li>实时出入库更新数据</li>
+</ul>
+<h4 id="多视图联动">多视图联动</h4>
+<p>建立车间数字化模型与车间实物设备之间的通讯通道，利用软PLC控制数字化模型的动作，利用脚本控制在途品运动，软PLC与实物PLC进行握手，从而实现车间数字化模型与实物之间的动作与运动同步。</p>
+<p>该案例并未引入车间实物设备，而是以WinCC组态界面代替，因为数字化模型与组态界面是通过PLC进行数据交互的，而PLC是可以驱动实物设备运行的。</p>
+<p>![玻璃磨边清洗 多视图联动框架图](./Blog_picSource/玻璃磨边清洗 框架图.jpg)</p>
+
+            </div>
+          </article>
+        </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://benben0605.github.io//post/demo3d-rack-xue-xi-ji-lu">
+              <h3 class="post-title">
+                Demo3D-Rack学习记录
+              </h3>
+            </a>
+          </div>  
+        
+
+        
+    
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
